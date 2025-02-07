@@ -1,27 +1,58 @@
-# QR Code Generator di Laravel
+# QR Code Generator dengan Laravel
 
-Proyek ini adalah implementasi **QR Code Generator sebagai tanda tangan digital** menggunakan Laravel.  
-Fitur ini memungkinkan pengguna untuk membuat QR Code dari sebuah URL atau teks.
+Project ini merupakan aplikasi Laravel yang memungkinkan pengguna untuk membuat QR Code sebagai tanda tangan digital.
 
-## 📌 Fitur
-✅ Generate QR Code dari URL atau teks
-✅ Simpan QR Code ke dalam storage Laravel  
-✅ Tampilkan QR Code di halaman web  
+## Fitur
+- Generate QR Code berdasarkan input pengguna.
+- Menampilkan QR Code di halaman web.
+- Menggunakan Laravel sebagai backend.
 
-## langkah-langkah instalasi & menjalankan project
-1. instalasi laravel dan create project
-2. kemudian install library QR code dengan perintah **composer require simplesoftwareio/simple-qrcode**
-3. membuat folder **qrcode** dan buat halaman index **resource/views/qrcode/index.blade.php**
-   yang berisi form untuk input URL/teks yang akan di Generate menjadi QR code yang akan tampil pada view
-4. membuat controller **http/controllers/QRcodeController.php** dengan :
-   **php artisan make:controller QRCodeController**
-5. membuat route pada **routes/web.php**
-6. jalankan aplikasi **php artisan serve**
-7. akses aplikasi di browser **http://127.0.0.1:8000**
+## Instalasi & Menjalankan Project
 
-## hasil
-1. Isi URL/teks di kolom input.
+### 1. Clone Repository
+```sh
+git clone https://github.com/noval-14/qrkode_project.git
+cd qrkode_project
+```
+
+### 2. Install Dependency
+```sh
+composer install
+npm install
+```
+
+### 3. Konfigurasi Environment
+Buat file `.env` dan sesuaikan dengan konfigurasi database.
+```sh
+cp .env.example .env
+php artisan key:generate
+```
+
+### 4. Migrasi Database
+```sh
+php artisan migrate
+```
+
+### 5. Compile Frontend Assets
+```sh
+npm run dev
+```
+
+### 6. Menjalankan Server
+```sh
+php artisan serve
+```
+Akses aplikasi di [http://localhost:8000](http://localhost:8000)
+
+## Cara Menggunakan
+1. Masukkan teks atau URL ke dalam input form.
 2. Pilih ukuran QR Code.
-3. Klik tombol "Generate QR Code" untuk melihat hasil QR Code.
+3. Klik tombol "Generate QR Code".
+4. QR Code akan muncul di samping form input.
 
-![Contoh QR Code](qr.png)
+![gambar](https://github.com/user-attachments/assets/bc9413cf-c07c-4096-9aa7-7fe2f9c6a016)
+
+
+## Lisensi
+Project ini dilisensikan di bawah MIT License.
+
